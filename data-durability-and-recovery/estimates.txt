@@ -1,0 +1,23 @@
+Recovery Time Objective (RTO)
+- It's measure of time, how many hours application take to recover after a disaster happens.
+
+Recovery Point Objective (RPO)
+- It's a measurement of maximum amount of data loss when disaster occurs, measured in hour
+
+1. Minimum RTO for a single AZ outage
+    - minimum RTO for single AZ outage recovers in a couple of minutes if muliti AZ deployment is on.
+    - It will automatically switch different AZ which is already running and all backups are there.
+
+2. Minimum RTO for a single region outage
+    - minimum RTO for a single region outage takes around 5 min or more depend on database size.
+    - we just need to deploy and bring read replica in different region as primary instance
+
+3. Minimum RPO for a single AZ outage
+    - in Multi-AZ deployment, automatic backup are enable, in this case aws create snapsot of your database once a day.
+    - aws will create log backup every 5 min.
+    - beacuse of all above backups and snapshots RPO for this senario is around 5 min.
+
+4. Minimum RPO for a single region outage
+    - Read replica that available in another region is sync with primary database.
+    - just take time to setup as primary instance. that would be done within 5-10 min.
+    - RPO in this case would be approx 10 minute.
