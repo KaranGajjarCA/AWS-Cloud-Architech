@@ -1,0 +1,28 @@
+﻿Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,18943.198000000004,227318.38,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+My Estimate,US East (N. Virginia),,Amazon EC2 ,0,4834.71,58016.52,USD,,"Tenancy (Dedicated Instances), Operating system (Linux), Workload (Consistent, Number of instances: 10), Advance EC2 instance (t3.2xlarge), Pricing strategy (On-Demand Utilization: 100 %Utilized/Month), Enable monitoring (disabled), EBS Storage amount (1000 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+My Estimate,US East (N. Virginia),,Amazon EC2 ,0,2699.768,32397.22,USD,,"Tenancy (Dedicated Instances), Operating system (Linux), Workload (Consistent, Number of instances: 8), Advance EC2 instance (t3.2xlarge), Pricing strategy (On-Demand Utilization: 24 Hours/Day), Enable monitoring (disabled), EBS Storage amount (1000 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+My Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,4735.62,56827.44,USD,,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (1000 GB), Quantity (2), Instance type (db.m4.4xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), Pricing strategy (OnDemand), Additional backup storage (100 GB)"
+My Estimate,US East (N. Virginia),s3 Glacier,S3 Standard,0,1150,13800.00,USD,,S3 Standard storage (50000 GB per month)
+My Estimate,US East (N. Virginia),s3 Glacier,Data Transfer,0,0,0.00,USD,,
+My Estimate,US East (N. Virginia),ALB,Application Load Balancer,0,3553.27,42639.24,USD,,Number of Application Load Balancers (3)
+My Estimate,US East (N. Virginia),,Amazon Route 53,0,900.5,10806.00,USD,,Hosted Zones (1)
+My Estimate,US East (N. Virginia),,VPN Connection,0,603.5,7242.00,USD,,"Working days per month (22), Number of Site-to-Site VPN Connections (1), Number of subnet associations (4)"
+My Estimate,US East (N. Virginia),,Network Address Translation (NAT) Gateway,0,155.7,1868.40,USD,,Number of NAT Gateways (2)
+My Estimate,US East (N. Virginia),,Amazon CloudWatch,0,310.13,3721.56,USD,,"Number of Metrics (includes detailed and custom metrics) (1000), Number of other API requests (10000), GetMetricData: Number of metrics requested (1000), GetMetricWidgetImage: Number of metrics requested (1000), Standard Logs: Data Ingested (10 GB), Logs Delivered to CloudWatch Logs: Data Ingested (10 GB), Number of Dashboards (1)"
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
+"EC2- Increased number of instances and move to dedicated instance"
+"RDS - Update instance type to m4.4xlarge, and added backup for 100GB"
+"ALB -  Incrase number of GB for IP process"
+"VPC - Increase number of NAT"
+"Cloudwatch - added new monitoring functionality"
