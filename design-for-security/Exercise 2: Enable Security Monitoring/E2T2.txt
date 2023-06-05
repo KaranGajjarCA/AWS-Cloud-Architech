@@ -1,0 +1,12 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+Port range 0 to 65535 is reachable from an Internet Gateway - UDP
+Port range 0 to 65535 is reachable from an Internet Gateway - TCP
+Port 22 is reachable from an Internet Gateway - TCP
+Port 22 is reachable from an Internet Gateway - TCP
+Port 80 is reachable from an Internet Gateway - TCP
+Port 5000 is reachable from an Internet Gateway - TCP
+
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+- also need to check s3 bucket, if not encryption, apply encryption on S3 objects.
+- add specific IP address range to security group for port 22 and 65535 and 5000 to restrict unauthorized access.

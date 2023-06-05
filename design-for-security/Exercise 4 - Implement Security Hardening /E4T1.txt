@@ -1,0 +1,10 @@
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+    - update Inbound and outbound rule for security group to restrict ssh connection from specific IP that are needed,
+    - Also, we can remove SSL login using password authentication
+    - Store password securly and encrypted in secure place.
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+    - Encrypt Data before uploading to secret recipts bucket using Encryption tool like KMS.
+    - Also, use the least Role based policy to restrict accessing all bucket resources to all users and perform action that is not needed.
+
+

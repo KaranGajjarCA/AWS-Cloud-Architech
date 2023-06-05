@@ -1,0 +1,21 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+- we can use Terrascan or CFRipper to scan infrastructure template
+
+### Example vulnerability
+- SSE not enabled
+- Ingress open to 0.0.0.0/0
+
+##Scan AMI’s or containers for OS vulnerabilities
+- we can use Clair or microscanner to scan for container vulnerability
+
+### Example vulnerability
+- NIST
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+- we can use AWS services like AWS Config, SecurityHUB or external lib like AWStealth
+
+### Example vulnerability
+- IAM user privilege. like MFA not setup
+- S3 encryption not enabled.

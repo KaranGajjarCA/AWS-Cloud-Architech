@@ -1,0 +1,14 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+ InstanceRole - This IAM role has all s3 permission to all s3 bucket. if User has this role, able to perform all actions to all s3 buckets in AWS account. they can also able to accidenty delete the bucket.
+ - If attack happens, attacker will have a full control over the s3.
+ - to solve this issue, we need to use least-privilege access policy. so that user can perform specific actions to specific resources.
+
+# Poor practice 3
+    Encryption - S3 bucket also used to store secret recipts, but without Encryption so any one who has bucket access or attacker can see the values.
+    to solve this issue we need to use proper encryption before uploading object to s3.
+
+# Poor practice 2
+   SecurityGroup - SG assign to Application Load balance can recevice all request from any IP from over port 80.
+   to solve this, Need to setup proper Ingress rule so that specific range of IP can access the Server.
